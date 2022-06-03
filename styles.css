@@ -1,36 +1,36 @@
+body{
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("dot-grid.webp");
+}
 
 header{
+    display: flex;
     background-color: black;
+    align-items: center;
     color: white;
     font-size: 24px;
-    text-align: left;
     font-family: futura-pt-condensed, sans-serif;
     font-weight: 700;
     font-style: normal;
-    padding-left: 14px;
-    border-bottom: 6px;
-    border-color: cornflowerblue;
-    border-style: hidden hidden solid hidden;
+    border-bottom: 6px, solid, cornflowerblue;
 }
 
-header > *{
-    margin: 0;
+h1{
+    margin-right: auto;
 }
 
 header > nav{
-    float:right;
     font-size: 16px;
-    text-align: left;
     font-family: futura-pt, sans-serif;
     font-weight: 700;
     font-style: normal;
-    margin: 18px;
 }
 
 header > nav > a:link, a:visited {
     color: white;
-    padding: 10px 20px;
-    text-align: center;
 }
   
 header > nav > a:hover, a:active {
@@ -38,16 +38,18 @@ header > nav > a:hover, a:active {
 }
 
 main{
+    display: flex;
     max-width: 900px;
     margin: 30px auto;
     font-family: "Futura PT", sans-serif;
-    background-image: url("dot-grid.webp");
     padding: 30px
 }
 
 article{
     float: left;
     max-width: 700px;
+    background-color: lightblue;
+    padding: 20px;
 }
 
 article > img{
@@ -56,8 +58,15 @@ article > img{
 }
 
 aside{
-    float:right;
-    max-width: 200px;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+aside > nav{
+    display: flex;
+    min-width: 200px;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 p {
@@ -70,22 +79,16 @@ hr {
     border-color: cornflowerblue;
 }
 
-main::after{
-    content: "";
-    clear: both;
-    display: block;
-}
-
 footer{
+    display: flex;
+    margin-top: auto;
     background-color: black;
     color: white;
-    text-align: center;
+    justify-content: center;
     font-family: futura-pt, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
     padding: 10px;
-    border-top: 6px;
-    border-color: cornflowerblue;
-    border-style: solid hidden hidden hidden;
+    border-top: 6px, solid, cornflowerblue;
 }
